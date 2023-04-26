@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+.footer-container {
+    padding: 2rem;
+    margin: 1rem 2rem;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0);
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.footer-container p {
+    background-color: rgb(226, 174, 78);
+    padding: 1rem;
+    font-size: 1.5rem;
+}

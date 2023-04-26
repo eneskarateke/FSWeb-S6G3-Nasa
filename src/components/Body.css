@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+.body-container {
+    padding: 2rem;
+    margin: 1rem 2rem;
+    text-align: center;
+    background-color: #faf6f552;
+    min-height: 60vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #000000;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url("https://images5.alphacoders.com/548/548279.jpg");
+
+}
+.nasaIMG{
+  padding: 2rem;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+a{
+  text-decoration: none;
+  color: #ffffff;
+} 
+
+
+.body-wrapper{
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+
+
+}
+
+
+.dateInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.dateContainer {
+  color:rgb(233, 190, 111);
+  font-size: 1.4rem;
+}
+
+.img-data{
+    display: flex;
+    margin: 1rem 1rem;
+    justify-content: space-around;
+    max-width: 100%;
+    height: auto;
+}
+.data-item{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  align-items: center;
+  height: auto;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item-details{
+  color:white
+}
+
+
+button {
+  color: #fff;
+  padding: 15px 25px;
+  background-color: rgb(235, 177, 70);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: 400;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
