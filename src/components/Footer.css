@@ -16,3 +16,19 @@
     padding: 1rem;
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 600px){
+    .footer-container {
+        padding: 1rem;
+        margin: 0rem 0rem;
+        
+    
+    }
+    
+    .footer-container p{
+       
+        font-size: 1rem;
+        
+    }
+
+}

@@ -28,12 +28,12 @@ function App() {
       })
       .then((response) => {
         setData(response.data);
-        console.log("data >", data);
       })
       .catch((error) => {
         console.log(error);
       });
     }, [secilenTarih]);
+    console.log("data >", {data})
 
   return (
     <div className="App">

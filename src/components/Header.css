@@ -21,3 +21,23 @@
     font-family: 'Roboto Mono', monospace;
     width: auto;
 }
+
+@media screen and (max-width: 600px){
+    .header {
+        padding: 1rem;
+        margin: 0rem 0rem;
+        
+
+    }
+    .headerTitle {
+        
+        font-size: 1.3rem;
+        
+    }
+    .aciklama{
+       
+        font-size: 1rem;
+        
+    }
+
+}

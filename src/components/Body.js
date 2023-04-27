@@ -2,6 +2,7 @@ import React from "react";
 import ImgData from "./itemData";
 import "./Body.css";
 
+
 function Body({data, handleDateChange, secilenTarih}) {
  
   const today = new Date();
