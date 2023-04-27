@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import "./itemData.css"
+import "./itemData.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from "reactstrap"; 
 
 function ImgData ({data}) {
   const [TarihiGoster, setTarihiGoster] = useState(false);
@@ -12,32 +14,32 @@ function ImgData ({data}) {
       {data && (
         <>
           <div className="data-item">
-            <button onClick={() => setTarihiGoster(!TarihiGoster)}>
+            <Button color="warning" size="lg" onClick={() => setTarihiGoster(!TarihiGoster)}>
               Tarih
-            </button>
+            </Button>
             {TarihiGoster && <div className="item-details">{data.date}</div>}
           </div>
 
           <div className="data-item">
-            <button onClick={() => setAciklamayiGoster(!AciklamayiGoster)}>
+            <Button color="primary" size="lg" onClick={() => setAciklamayiGoster(!AciklamayiGoster)}>
               Açıklama
-            </button>
+            </Button>
             {AciklamayiGoster && (
               <div className="item-details">{data.explanation}</div>
             )}
           </div>
 
           <div className="data-item">
-            <button onClick={() => setBasligiGoster(!BasligiGoster)}>
+            <Button color="success" size="lg" onClick={() => setBasligiGoster(!BasligiGoster)}>
               Başlık
-            </button>
+            </Button>
             {BasligiGoster && (
               <div className="item-details">{data.title}</div>
             )}
           </div>
 
           <div className="data-item">
-            <button onClick={() => setUrlyiGoster(!UrlyiGoster)}>URL</button>
+            <Button color="danger" size="lg" onClick={() => setUrlyiGoster(!UrlyiGoster)}>URL</Button>
             {UrlyiGoster && (
               <div className="item-details">
                 <a rel="noopener noreferrer" target="_blank" href={data.url}>

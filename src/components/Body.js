@@ -4,8 +4,22 @@ import "./Body.css";
 
 function Body({data, handleDateChange, secilenTarih}) {
  
-  
-  
+  const today = new Date();
+  const year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+
+ 
+  if (month < 10) {
+    month = '0' + month;
+  }
+  if (day < 10) {
+    day = '0' + day;
+  }
+
+  const maxDate = `${year}-${month}-${day}`;
+
+
 
   return (
     <div className="body-container">
@@ -17,11 +31,14 @@ function Body({data, handleDateChange, secilenTarih}) {
             type="date"
             value={secilenTarih}
             onChange={handleDateChange}
+            min="1995-01-01" 
+            max = {maxDate}
+
           />
         </div>
 
         <ImgData data={data}/>
-        
+
       </div>
 
   {data && data.media_type === "image" && (
