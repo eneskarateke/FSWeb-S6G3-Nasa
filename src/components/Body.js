@@ -1,41 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./Body.css";
-import axios from "axios";
 
-const apiKey = "r2O9yH5TmgDNZgMeiUYWofsaycfwlaNHDT2JF7Ce";
-
-function Body() {
-  const [data, setData] = useState(null);
-  const [secilenTarih, setSecilenTarih] = useState("");
+function Body({data, handleDateChange, secilenTarih}) {
+ 
+  
   const [TarihiGoster, setTarihiGoster] = useState(false);
   const [AciklamayiGoster, setAciklamayiGoster] = useState(false);
   const [BasligiGoster, setBasligiGoster] = useState(false);
   const [UrlyiGoster, setUrlyiGoster] = useState(false);
-
-  const handleDateChange = (event) => {
-    setSecilenTarih(event.target.value);
-  };
-
-  useEffect(() => {
-    const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=r2O9yH5TmgDNZgMeiUYWofsaycfwlaNHDT2JF7Ce${
-      secilenTarih ? "&date=" + secilenTarih : ""
-    }`;
-    axios
-      .get(apiUrl, {
-        params: {
-          api_key: apiKey,
-          date: secilenTarih,
-        },
-      })
-      .then((response) => {
-        setData(response.data);
-        console.log("data >", response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, [secilenTarih]);
-
+  
   return (
     <div className="body-container">
       <div className="body-wrapper">
@@ -80,7 +53,7 @@ function Body() {
               <button onClick={() => setUrlyiGoster(!UrlyiGoster)}>URL</button>
               {UrlyiGoster && (
                 <div className="item-details">
-                  <a target="_blank" href={data.url}>
+                  <a rel="noopener noreferrer"  target="_blank" href={data.url}>
                     {data.url}
                   </a>
                 </div>
@@ -89,25 +62,20 @@ function Body() {
           </div>
         )}
       </div>
-      <div className="img-container">
-        {data && data.media_type === "image" && (
-          <img className="nasaIMG" src={data.url} alt={data.title} />
-        )}
-        {data && data.media_type === "video" && (
-          <div className="videoWrapper">
-            <iframe
-              className="nasaVideo"
-              src={data.url}
-              title={data.title}
-              allowFullScreen
-            />
-          </div>
 
-          
-        )}
+  {data && data.media_type === "image" && (
+    <div className="img-container">
+    <img className="nasaIMG" src={data.url} alt={data.title} />
+    </div>)}
+  
+    {data && data.media_type === "video" && (
+    <div className="video-container"> 
+    <iframe className="videoData" src={data.url} title={data.title}></iframe>
+    </div>  )}
+      
       </div>
-    </div>
-  );
-}
+          
+        );
+      }
 
 export default Body;

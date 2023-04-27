@@ -62,13 +62,13 @@ a{
   height: auto;
 }
 
-.videoWrapper {
+.video-container {
   position: relative;
   padding-bottom: 56.25%; 
   height: 0;
 }
 
-.videoWrapper iframe {
+.video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
