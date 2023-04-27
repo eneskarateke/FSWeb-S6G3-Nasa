@@ -47,20 +47,6 @@ a{
   font-size: 1.4rem;
 }
 
-.img-data{
-    display: flex;
-    margin: 1rem 1rem;
-    justify-content: space-around;
-    max-width: 100%;
-    height: auto;
-}
-.data-item{
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 1rem;
-  align-items: center;
-  height: auto;
-}
 
 .video-container {
   position: relative;
@@ -76,9 +62,7 @@ a{
   height: 100%;
 }
 
-.item-details{
-  color:white
-}
+
 
 
 button {
