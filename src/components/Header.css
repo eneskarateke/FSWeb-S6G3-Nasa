@@ -3,11 +3,11 @@
 
 .header {
     padding: 2rem;
-    margin: 1rem 2rem;
+    /* margin: 1rem 0; */
     text-align: center;
-    background-color: rgb(226, 174, 78);
+    background-color: #3730A3;
     color: aliceblue;
-    max-height: 11rem;
+    max-height: auto;
 }
 .headerTitle {
     font-weight: 400;
@@ -20,6 +20,7 @@
     font-size: 1.5rem;
     font-family: 'Roboto Mono', monospace;
     width: auto;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px){
@@ -31,12 +32,12 @@
     }
     .headerTitle {
         
-        font-size: 1.3rem;
+        font-size: 14px;
         
     }
     .aciklama{
        
-        font-size: 1rem;
+        font-size: 10px;
         
     }
 

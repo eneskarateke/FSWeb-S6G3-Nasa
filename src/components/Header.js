@@ -1,13 +1,17 @@
 import React from "react";
-import "./Header.css"
+import "./Header.css";
 
 function Header() {
   return (
     <div className="header">
-      <p className="headerTitle">
-        NASADAN Günün FOTOĞRAFI! </p>
+      <p className="headerTitle">Astronomy Picture of the Day from Nasa </p>
       <p className="aciklama">
-        Lütfen hangi tarihteki fotoğrafı görmek istiyorsanız aşağıdan o tarihi seçin! <span role="img" aria-label='go!'>🚀</span>!
+        Aşağıdan tarih seçerek, seçtiğiniz tarihteki fotoğrafı veya videoyu
+        görebilirsiniz.
+        <span role="img" aria-label="go!">
+          🚀
+        </span>
+        !
       </p>
     </div>
   );

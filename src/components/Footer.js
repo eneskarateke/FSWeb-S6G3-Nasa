@@ -1,11 +1,15 @@
 import React from "react";
-import "./Footer.css"
+import "./Footer.css";
 
 function Footer() {
   return (
     <div className="footer-container">
-      <p>
-        NASA size iyi günler diler! <span role="img" aria-label='go!'>🚀</span>!
+      <p className="footer-container-P">
+        Sitemiz her gün, Nasa'dan gelen günün içeriğiyle güncellenmektedir.{" "}
+        <span role="img" aria-label="go!">
+          🚀
+        </span>
+        !
       </p>
     </div>
   );
