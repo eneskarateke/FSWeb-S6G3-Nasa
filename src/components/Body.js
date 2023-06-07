@@ -17,6 +17,36 @@ function Body({ data, handleDateChange, secilenTarih }) {
 
   const maxDate = `${year}-${month}-${day}`;
 
+  if (!data) {
+    return null; // Don't render anything if data is undefined
+  }
+
+  if (data.bakim) {
+    return (
+      <div className="body-container">
+        <div className="body-wrapper">
+          <p className="maintenanceMessage">{data.bakim}</p>
+        </div>
+
+        {data.media_type === "image" && (
+          <div className="img-container">
+            <img className="nasaIMG" src={data.url} alt={data.title} />
+          </div>
+        )}
+
+        {data.media_type === "video" && (
+          <div className="video-container">
+            <iframe
+              className="videoData"
+              src={data.url}
+              title={data.title}
+            ></iframe>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="body-container">
       <div className="body-wrapper">
@@ -35,13 +65,13 @@ function Body({ data, handleDateChange, secilenTarih }) {
         <ImgData data={data} />
       </div>
 
-      {data && data.media_type === "image" && (
+      {data.media_type === "image" && (
         <div className="img-container">
           <img className="nasaIMG" src={data.url} alt={data.title} />
         </div>
       )}
 
-      {data && data.media_type === "video" && (
+      {data.media_type === "video" && (
         <div className="video-container">
           <iframe
             className="videoData"

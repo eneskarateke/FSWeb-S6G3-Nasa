@@ -40,7 +40,9 @@ a{
 
 }
 
-
+.maintenanceMessage{
+  color: white
+}
 .dateInput {
   padding: 10px;
   border: 1px solid #ccc;
